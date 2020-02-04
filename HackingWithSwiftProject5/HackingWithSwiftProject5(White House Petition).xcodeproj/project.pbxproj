@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D71057E23E83717003BBAA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71057D23E83717003BBAA3 /* AppDelegate.swift */; };
-		7D71058023E83717003BBAA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71057F23E83717003BBAA3 /* SceneDelegate.swift */; };
-		7D71058223E83717003BBAA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71058123E83717003BBAA3 /* ViewController.swift */; };
-		7D71058523E83717003BBAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D71058323E83717003BBAA3 /* Main.storyboard */; };
-		7D71058723E83719003BBAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D71058623E83719003BBAA3 /* Assets.xcassets */; };
-		7D71058A23E83719003BBAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D71058823E83719003BBAA3 /* LaunchScreen.storyboard */; };
-		7D71059223E84747003BBAA3 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7D71059123E84747003BBAA3 /* start.txt */; };
+		7D01EA8623E960FB002D84F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01EA8523E960FB002D84F6 /* AppDelegate.swift */; };
+		7D01EA8823E960FB002D84F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01EA8723E960FB002D84F6 /* SceneDelegate.swift */; };
+		7D01EA8A23E960FB002D84F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01EA8923E960FB002D84F6 /* ViewController.swift */; };
+		7D01EA8D23E960FB002D84F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D01EA8B23E960FB002D84F6 /* Main.storyboard */; };
+		7D01EA8F23E960FC002D84F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D01EA8E23E960FC002D84F6 /* Assets.xcassets */; };
+		7D01EA9223E960FC002D84F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D01EA9023E960FC002D84F6 /* LaunchScreen.storyboard */; };
+		7D01EA9A23E96A1B002D84F6 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01EA9923E96A1B002D84F6 /* DetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D71057A23E83717003BBAA3 /* HackingWithSwiftProject4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingWithSwiftProject4.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D71057D23E83717003BBAA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D71057F23E83717003BBAA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D71058123E83717003BBAA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7D71058423E83717003BBAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7D71058623E83719003BBAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7D71058923E83719003BBAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7D71058B23E83719003BBAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D71059123E84747003BBAA3 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
+		7D01EA8223E960FB002D84F6 /* HackingWithSwiftProject5(White House Petition).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackingWithSwiftProject5(White House Petition).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D01EA8523E960FB002D84F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D01EA8723E960FB002D84F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D01EA8923E960FB002D84F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D01EA8C23E960FB002D84F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D01EA8E23E960FC002D84F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D01EA9123E960FC002D84F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D01EA9323E960FC002D84F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D01EA9923E96A1B002D84F6 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D71057723E83717003BBAA3 /* Frameworks */ = {
+		7D01EA7F23E960FB002D84F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D71057123E83717003BBAA3 = {
+		7D01EA7923E960FB002D84F6 = {
 			isa = PBXGroup;
 			children = (
-				7D71057C23E83717003BBAA3 /* HackingWithSwiftProject4 */,
-				7D71057B23E83717003BBAA3 /* Products */,
+				7D01EA8423E960FB002D84F6 /* HackingWithSwiftProject5(White House Petition) */,
+				7D01EA8323E960FB002D84F6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7D71057B23E83717003BBAA3 /* Products */ = {
+		7D01EA8323E960FB002D84F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D71057A23E83717003BBAA3 /* HackingWithSwiftProject4.app */,
+				7D01EA8223E960FB002D84F6 /* HackingWithSwiftProject5(White House Petition).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D71057C23E83717003BBAA3 /* HackingWithSwiftProject4 */ = {
+		7D01EA8423E960FB002D84F6 /* HackingWithSwiftProject5(White House Petition) */ = {
 			isa = PBXGroup;
 			children = (
-				7D71057D23E83717003BBAA3 /* AppDelegate.swift */,
-				7D71057F23E83717003BBAA3 /* SceneDelegate.swift */,
-				7D71058123E83717003BBAA3 /* ViewController.swift */,
-				7D71058323E83717003BBAA3 /* Main.storyboard */,
-				7D71058623E83719003BBAA3 /* Assets.xcassets */,
-				7D71058823E83719003BBAA3 /* LaunchScreen.storyboard */,
-				7D71058B23E83719003BBAA3 /* Info.plist */,
-				7D71059123E84747003BBAA3 /* start.txt */,
+				7D01EA8523E960FB002D84F6 /* AppDelegate.swift */,
+				7D01EA8723E960FB002D84F6 /* SceneDelegate.swift */,
+				7D01EA8923E960FB002D84F6 /* ViewController.swift */,
+				7D01EA8B23E960FB002D84F6 /* Main.storyboard */,
+				7D01EA8E23E960FC002D84F6 /* Assets.xcassets */,
+				7D01EA9023E960FC002D84F6 /* LaunchScreen.storyboard */,
+				7D01EA9323E960FC002D84F6 /* Info.plist */,
+				7D01EA9923E96A1B002D84F6 /* DetailedViewController.swift */,
 			);
-			path = HackingWithSwiftProject4;
+			path = "HackingWithSwiftProject5(White House Petition)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D71057923E83717003BBAA3 /* HackingWithSwiftProject4 */ = {
+		7D01EA8123E960FB002D84F6 /* HackingWithSwiftProject5(White House Petition) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D71058E23E83719003BBAA3 /* Build configuration list for PBXNativeTarget "HackingWithSwiftProject4" */;
+			buildConfigurationList = 7D01EA9623E960FC002D84F6 /* Build configuration list for PBXNativeTarget "HackingWithSwiftProject5(White House Petition)" */;
 			buildPhases = (
-				7D71057623E83717003BBAA3 /* Sources */,
-				7D71057723E83717003BBAA3 /* Frameworks */,
-				7D71057823E83717003BBAA3 /* Resources */,
+				7D01EA7E23E960FB002D84F6 /* Sources */,
+				7D01EA7F23E960FB002D84F6 /* Frameworks */,
+				7D01EA8023E960FB002D84F6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HackingWithSwiftProject4;
-			productName = HackingWithSwiftProject4;
-			productReference = 7D71057A23E83717003BBAA3 /* HackingWithSwiftProject4.app */;
+			name = "HackingWithSwiftProject5(White House Petition)";
+			productName = "HackingWithSwiftProject5(White House Petition)";
+			productReference = 7D01EA8223E960FB002D84F6 /* HackingWithSwiftProject5(White House Petition).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7D71057223E83717003BBAA3 /* Project object */ = {
+		7D01EA7A23E960FB002D84F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Henry-chime chibuike";
 				TargetAttributes = {
-					7D71057923E83717003BBAA3 = {
+					7D01EA8123E960FB002D84F6 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = 7D71057523E83717003BBAA3 /* Build configuration list for PBXProject "HackingWithSwiftProject4" */;
+			buildConfigurationList = 7D01EA7D23E960FB002D84F6 /* Build configuration list for PBXProject "HackingWithSwiftProject5(White House Petition)" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 7D71057123E83717003BBAA3;
-			productRefGroup = 7D71057B23E83717003BBAA3 /* Products */;
+			mainGroup = 7D01EA7923E960FB002D84F6;
+			productRefGroup = 7D01EA8323E960FB002D84F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D71057923E83717003BBAA3 /* HackingWithSwiftProject4 */,
+				7D01EA8123E960FB002D84F6 /* HackingWithSwiftProject5(White House Petition) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D71057823E83717003BBAA3 /* Resources */ = {
+		7D01EA8023E960FB002D84F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D71058A23E83719003BBAA3 /* LaunchScreen.storyboard in Resources */,
-				7D71059223E84747003BBAA3 /* start.txt in Resources */,
-				7D71058723E83719003BBAA3 /* Assets.xcassets in Resources */,
-				7D71058523E83717003BBAA3 /* Main.storyboard in Resources */,
+				7D01EA9223E960FC002D84F6 /* LaunchScreen.storyboard in Resources */,
+				7D01EA8F23E960FC002D84F6 /* Assets.xcassets in Resources */,
+				7D01EA8D23E960FB002D84F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D71057623E83717003BBAA3 /* Sources */ = {
+		7D01EA7E23E960FB002D84F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D71058223E83717003BBAA3 /* ViewController.swift in Sources */,
-				7D71057E23E83717003BBAA3 /* AppDelegate.swift in Sources */,
-				7D71058023E83717003BBAA3 /* SceneDelegate.swift in Sources */,
+				7D01EA8A23E960FB002D84F6 /* ViewController.swift in Sources */,
+				7D01EA8623E960FB002D84F6 /* AppDelegate.swift in Sources */,
+				7D01EA9A23E96A1B002D84F6 /* DetailedViewController.swift in Sources */,
+				7D01EA8823E960FB002D84F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7D71058323E83717003BBAA3 /* Main.storyboard */ = {
+		7D01EA8B23E960FB002D84F6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D71058423E83717003BBAA3 /* Base */,
+				7D01EA8C23E960FB002D84F6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		7D71058823E83719003BBAA3 /* LaunchScreen.storyboard */ = {
+		7D01EA9023E960FC002D84F6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D71058923E83719003BBAA3 /* Base */,
+				7D01EA9123E960FC002D84F6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7D71058C23E83719003BBAA3 /* Debug */ = {
+		7D01EA9423E960FC002D84F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		7D71058D23E83719003BBAA3 /* Release */ = {
+		7D01EA9523E960FC002D84F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,36 +284,36 @@
 			};
 			name = Release;
 		};
-		7D71058F23E83719003BBAA3 /* Debug */ = {
+		7D01EA9723E960FC002D84F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MKVGVKKUL;
-				INFOPLIST_FILE = HackingWithSwiftProject4/Info.plist;
+				INFOPLIST_FILE = "HackingWithSwiftProject5(White House Petition)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ozztech.HackingWithSwiftProject4;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ozztech.HackingWithSwiftProject5-White-House-Petition-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7D71059023E83719003BBAA3 /* Release */ = {
+		7D01EA9823E960FC002D84F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MKVGVKKUL;
-				INFOPLIST_FILE = HackingWithSwiftProject4/Info.plist;
+				INFOPLIST_FILE = "HackingWithSwiftProject5(White House Petition)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ozztech.HackingWithSwiftProject4;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ozztech.HackingWithSwiftProject5-White-House-Petition-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,25 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D71057523E83717003BBAA3 /* Build configuration list for PBXProject "HackingWithSwiftProject4" */ = {
+		7D01EA7D23E960FB002D84F6 /* Build configuration list for PBXProject "HackingWithSwiftProject5(White House Petition)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D71058C23E83719003BBAA3 /* Debug */,
-				7D71058D23E83719003BBAA3 /* Release */,
+				7D01EA9423E960FC002D84F6 /* Debug */,
+				7D01EA9523E960FC002D84F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D71058E23E83719003BBAA3 /* Build configuration list for PBXNativeTarget "HackingWithSwiftProject4" */ = {
+		7D01EA9623E960FC002D84F6 /* Build configuration list for PBXNativeTarget "HackingWithSwiftProject5(White House Petition)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D71058F23E83719003BBAA3 /* Debug */,
-				7D71059023E83719003BBAA3 /* Release */,
+				7D01EA9723E960FC002D84F6 /* Debug */,
+				7D01EA9823E960FC002D84F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7D71057223E83717003BBAA3 /* Project object */;
+	rootObject = 7D01EA7A23E960FB002D84F6 /* Project object */;
 }
