@@ -8,16 +8,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "120F4FBF-B597-47A8-B2C7-0C1E6810BAFA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "HackingWithSwiftProject5(White House Petition)/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "Search()"
+            landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
@@ -27,31 +27,38 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "14C4C89D-3466-49AF-9124-28F6FE6FDACC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "HackingWithSwiftProject5(White House Petition)/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "filteredPetitions"
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
+            <Locations>
+               <Location
+                  uuid = "120F4FBF-B597-47A8-B2C7-0C1E6810BAFA - fdc9e884eb6e0330"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackingWithSwiftProject5_White_House_Petition_.ViewController.Search() -&gt; ()"
+                  moduleName = "HackingWithSwiftProject5(White House Petition)"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/henry-chimechibuike/Desktop/DailySessions/HackingWithSwiftProject5/HackingWithSwiftProject5(White%20House%20Petition)/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "234">
+               </Location>
+               <Location
+                  uuid = "120F4FBF-B597-47A8-B2C7-0C1E6810BAFA - e12cc590fc0bd98c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in HackingWithSwiftProject5_White_House_Petition_.ViewController.Search() -&gt; ()"
+                  moduleName = "HackingWithSwiftProject5(White House Petition)"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/henry-chimechibuike/Desktop/DailySessions/HackingWithSwiftProject5/HackingWithSwiftProject5(White%20House%20Petition)/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "119">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

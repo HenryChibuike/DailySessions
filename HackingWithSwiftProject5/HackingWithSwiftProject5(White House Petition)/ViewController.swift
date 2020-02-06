@@ -89,17 +89,19 @@ class ViewController: UITableViewController {
 //            navigationController?.navigationBar.prefersLargeTitles = true
         }
         
-        
+        DispatchQueue.global(qos: .userInitiated).async{
         if let url = URL(string: urlString) {
+        
             if let data = try? Data(contentsOf: url) {
-            parse(json: data)
-            }else{
-                showError()
+                self.parse(json: data)
+            }
+            else{
+                self.showError()
             }
         }else{
-            showError()
+            self.showError()
         }
-        
+    }
         
     }
     
@@ -130,23 +132,32 @@ class ViewController: UITableViewController {
     }
     
     func submitSearch(_ answer: String){
-        let result = petitions
-        self.filteredPetitions.removeAll()
-        
-        result.forEach({
-            if $0.title!.contains(answer) {
-                self.filteredPetitions.append($0)
-//                print(filteredPetitions)
+        DispatchQueue.global(qos: .background).async {
+            let result = self.petitions
+            self.filteredPetitions.removeAll()
+            
+            result.forEach({
+                if $0.title!.contains(answer) {
+                    self.filteredPetitions.append($0)
+                    //                print(filteredPetitions)
+                }
+            })
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-        })
-        tableView.reloadData()
-    }
+            
+        }
+        }
+      
     
     func showError() {
-        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-    }
+        DispatchQueue.main.async {
+                let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(ac, animated: true)
+            }
+        }
+    
 
     
     
@@ -156,7 +167,10 @@ class ViewController: UITableViewController {
         // here you decode the struct that has var results
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
         }
     }
     
