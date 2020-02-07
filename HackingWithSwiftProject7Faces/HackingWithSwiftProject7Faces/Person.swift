@@ -6,4 +6,16 @@
 //  Copyright © 2020 Henry-chime chibuike. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Person: NSObject {
+    
+    var name: String
+    var image: String
+    
+    init(name: String, image: String) {
+        self.name = name
+        self.image = image
+    }
+    
+}
