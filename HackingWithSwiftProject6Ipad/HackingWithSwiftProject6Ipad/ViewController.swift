@@ -184,23 +184,23 @@ class ViewController: UIViewController {
         var clueString = ""
         var solutionString = ""
         var letterBits = [String]()
-
+        
         if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
             if let levelContents = try? String(contentsOf: levelFileURL) {
                 var lines = levelContents.components(separatedBy: "\n")
                 lines.shuffle()
-
+                
                 for (index, line) in lines.enumerated() {
                     let parts = line.components(separatedBy: ": ")
                     let answer = parts[0]
                     let clue = parts[1]
-
+                    
                     clueString += "\(index + 1). \(clue)\n"
-//                    print(clueString)
+                    //                    print(clueString)
                     let solutionWord = answer.replacingOccurrences(of: "|", with: "")
                     solutionString += "\(solutionWord.count) letters\n"
                     solutions.append(solutionWord)
-
+                    
                     let bits = answer.components(separatedBy: "|")
                     letterBits += bits
                 }
@@ -210,9 +210,9 @@ class ViewController: UIViewController {
         // Now configure the buttons and labels
         cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
         answersLabel.text = solutionString.trimmingCharacters(in: .whitespacesAndNewlines)
-
+        
         letterBits.shuffle()
-
+        
         if letterBits.count == letterButtons.count {
             for i in 0 ..< letterButtons.count {
                 letterButtons[i].setTitle(letterBits[i], for: .normal)
@@ -220,12 +220,17 @@ class ViewController: UIViewController {
         }
     }
 
-    
+   
     @objc func letterTapped(_ sender: UIButton) {
+
         guard let buttonTitle = sender.titleLabel?.text else { return }
-          currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
-          activatedButtons.append(sender)
-          sender.isHidden = true
+        currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
+        activatedButtons.append(sender)
+        // adding Animation to button
+        UIView.animate(withDuration: 0.3, animations: {
+             sender.alpha = 0
+        })
+       
     }
 
     @objc func submitTapped(_ sender: UIButton) {
