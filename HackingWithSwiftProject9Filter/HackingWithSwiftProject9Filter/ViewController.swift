@@ -11,7 +11,7 @@ import CoreImage
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    let mainView: UIView = {
+    lazy var mainView: UIView = {
         let mv = UIView()
         mv.translatesAutoresizingMaskIntoConstraints = false
         mv.backgroundColor = .white
@@ -27,14 +27,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         return iv
     }()
     
-    let sldier: UISlider = {
+    lazy var slider: UISlider = {
         let s = UISlider()
         s.translatesAutoresizingMaskIntoConstraints = false
-        s.addTarget(self, action: #selector(slider), for: .valueChanged)
         return s
     }()
     
-    let tensityLabel : UILabel = {
+    lazy var tensityLabel : UILabel = {
         let tl = UILabel()
         tl.translatesAutoresizingMaskIntoConstraints = false
         tl.text = "Tensity"
@@ -42,7 +41,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         return tl
     }()
     
-    let changeFilterButton: UIButton = {
+    lazy var changeFilterButton: UIButton = {
         let cfb = UIButton()
         cfb.translatesAutoresizingMaskIntoConstraints = false
         cfb.setTitle("Change Filter", for: .normal)
@@ -51,23 +50,16 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         return cfb
     }()
     
-    let saveButton: UIButton = {
+    lazy var SaveButton: UIButton = {
         let sb = UIButton()
         sb.translatesAutoresizingMaskIntoConstraints = false
         sb.setTitle("Save", for: .normal)
         sb.setTitleColor(.systemBlue, for: .normal)
-        sb.tag = 1
-//        sb.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+//        sb.addTarget(self, action: #selector(saveButton), for: .touchUpInside)
+
         return sb
     }()
     // End of ui code
-    
-    
-    
-    
-    
-    
-    
     
 
     var currentImage: UIImage!
@@ -77,15 +69,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .init(white: 0.96, alpha: 1)
-        view.addSubview(mainView)
-        view.addSubview(imageView)
-        view.addSubview(sldier)
-        view.addSubview(tensityLabel)
-        view.addSubview(changeFilterButton)
-        view.addSubview(saveButton)
-//        saveButton.addTarget(self, action: #selector(SaveImage), for: .touchUpInside)
+        
+        view.addSubViews([mainView, imageView, slider, tensityLabel, changeFilterButton, SaveButton])
+        
+        SaveButton.addTarget(self, action: #selector(self.saveButton), for: .touchUpInside)
+        slider.addTarget(self, action: #selector(self.sliderAction), for: .valueChanged)
         Layout()
-        save(saveButton.self)
         title = "ChiFilter"
         navigationItem.leftBarButtonItem = .init(barButtonSystemItem: .add, target: self, action: #selector(imagePicker))
         
@@ -95,18 +84,14 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
 
     }
     // End of ViewDidLoad
-    
-    func save(_ sender: UIButton ){
-        if sender.tag == 1 {
-            guard let image = imageView.image else { return }
 
-               UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-        }else{
-            return
-        }
+    @objc func saveButton(){
+        guard let image = imageView.image else { return }
+        
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+//        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
-
-    
     
     @objc func imagePicker(){
         let picker = UIImagePickerController()
@@ -126,7 +111,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     
-    @objc func slider(){
+    @objc func sliderAction(){
          applyProcessing()
     }
     
@@ -154,15 +139,17 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
 
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-
-        applyProcessing()
+        DispatchQueue.main.async {
+            self.applyProcessing()
+        }
+        
     }
 
     func applyProcessing() {
         let inputKeys = currentFilter.inputKeys
-        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(sldier.value, forKey: kCIInputIntensityKey) }
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(sldier.value * 200, forKey: kCIInputRadiusKey) }
-        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(sldier.value * 10, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(slider.value, forKey: kCIInputIntensityKey) }
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(slider.value * 200, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(slider.value * 10, forKey: kCIInputScaleKey) }
         if inputKeys.contains(kCIInputCenterKey) { currentFilter.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey) }
         if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
             let processedImage = UIImage(cgImage: cgimg)
@@ -186,38 +173,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     func Layout(){
         NSLayoutConstraint.activate([
             
@@ -234,9 +189,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             imageView.heightAnchor.constraint(equalToConstant: 440),
             
             //
-            sldier.topAnchor.constraint(equalTo: mainView.bottomAnchor, constant: 20),
-            sldier.leftAnchor.constraint(equalTo: tensityLabel.rightAnchor, constant: 5),
-            sldier.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor, constant: -5),
+            slider.topAnchor.constraint(equalTo: mainView.bottomAnchor, constant: 20),
+            slider.leftAnchor.constraint(equalTo: tensityLabel.rightAnchor, constant: 5),
+            slider.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor, constant: -5),
             
             //
             tensityLabel.topAnchor.constraint(equalTo:mainView.bottomAnchor , constant: 23),
@@ -250,10 +205,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             
             //
             
-            saveButton.topAnchor.constraint(equalTo: tensityLabel.bottomAnchor, constant: 10),
-            saveButton.rightAnchor.constraint(equalTo: mainView.rightAnchor, constant: -5),
-            saveButton.heightAnchor.constraint(equalToConstant: 70),
-            saveButton.widthAnchor.constraint(equalToConstant: 70)
+            SaveButton.topAnchor.constraint(equalTo: tensityLabel.bottomAnchor, constant: 10),
+            SaveButton.rightAnchor.constraint(equalTo: mainView.rightAnchor, constant: -5),
+            SaveButton.heightAnchor.constraint(equalToConstant: 70),
+            SaveButton.widthAnchor.constraint(equalToConstant: 70)
             
         ])
        

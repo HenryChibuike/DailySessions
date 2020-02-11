@@ -6,4 +6,11 @@
 //  Copyright © 2020 Henry-chime chibuike. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIView {
+    
+    func addSubViews(_ views: [Any]) {
+        views.forEach({ self.addSubview($0 as! UIView) })
+    }
+}
