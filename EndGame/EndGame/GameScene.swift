@@ -58,6 +58,7 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
         
         
         gameTimer = Timer.scheduledTimer(timeInterval: 0.30, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+//        gameTimer?.invalidate()
 //
 //        gameTimer = Timer.scheduledTimer(timeInterval: 0.10, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
         
@@ -66,6 +67,10 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
     @objc func createEnemy() {
         guard let enemy = possibleEnemies.randomElement() else { return }
         
+        if isGameOver {
+            gameTimer?.invalidate()
+            return
+        }
         let sprite = SKSpriteNode(imageNamed: enemy)
         sprite.position = CGPoint(x: 1200, y: Int.random(in: 50...736))
         addChild(sprite)
@@ -77,12 +82,12 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
         sprite.physicsBody?.linearDamping = 0
         sprite.physicsBody?.angularDamping = 0
         
-        if gameTimer?.timeInterval == 2.00 {
-            
-            print("gotten To 20 seconds")
-        }
+//        if gameTimer?.timeInterval == 2.00 {
+//            
+//            print("gotten To 20 seconds")
+//        }
         
-        if enemy.count == 20 {
+        if enemy.count == 3 {
             score += 100
         }
         
@@ -98,12 +103,14 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
             }
         }
         
-        if !isGameOver {
+        if gameTimer!.isValid {
+            
             score += 1
         }
         
-        if isGameOver{
-            isGameOver = true
+        if isGameOver {
+            isGameOver = false
+            gameTimer?.invalidate()
             possibleEnemies.removeAll()
             let alert = UIAlertController(title: "Game Ended", message: "Do You want To Play Again", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
@@ -120,7 +127,7 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
                 self.view?.window?.rootViewController?.present(endGameAlert, animated: true, completion: nil)
             }))
             
-            alert.dismiss(animated: true, completion: nil)
+//            alert.dismiss(animated: true, completion: nil)
             self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
         }
     }
@@ -145,7 +152,6 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
         addChild(explosion)
         
         player.removeFromParent()
-        gameTimer?.invalidate()
         isGameOver = true
     }
     

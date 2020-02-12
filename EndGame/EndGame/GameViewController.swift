@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameView  = self.view as! SKView
         self.buildScene()
     }
 
@@ -36,14 +37,9 @@ class GameViewController: UIViewController {
         return true
     }
     
-    
     func buildScene() {
         self.scene = nil
-        gameView = nil
-        gameView  = self.view as! SKView
         self.scene = SKScene(fileNamed: "GameScene") as? GameScene
-//        self.scene.isGameOver = false
-        // Set the scale mode to scale to fit the window
         self.scene.scaleMode = .aspectFill
         self.scene.sceneDelegate = self
         // Present the scene

@@ -14,9 +14,9 @@
             filePath = "EndGame/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "update(_:)"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "createEnemy()"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
@@ -39,9 +39,9 @@
             filePath = "EndGame/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "didBegin(_:)"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "touchesMoved(_:with:)"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
@@ -64,8 +64,8 @@
             filePath = "EndGame/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "update(_:)"
             landmarkType = "7">
             <Actions>
@@ -89,8 +89,8 @@
             filePath = "EndGame/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "update(_:)"
             landmarkType = "7">
             <Actions>
@@ -114,8 +114,8 @@
             filePath = "EndGame/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "update(_:)"
             landmarkType = "7">
             <Actions>
@@ -139,8 +139,8 @@
             filePath = "EndGame/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "update(_:)"
             landmarkType = "7">
             <Actions>
