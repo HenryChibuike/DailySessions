@@ -58,9 +58,7 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
         
         
         gameTimer = Timer.scheduledTimer(timeInterval: 0.30, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
-//        gameTimer?.invalidate()
-//
-//        gameTimer = Timer.scheduledTimer(timeInterval: 0.10, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+
         
     }
     
@@ -81,12 +79,7 @@ class GameScene: SKScene,  SKPhysicsContactDelegate {
         sprite.physicsBody?.angularVelocity = 5
         sprite.physicsBody?.linearDamping = 0
         sprite.physicsBody?.angularDamping = 0
-        
-//        if gameTimer?.timeInterval == 2.00 {
-//            
-//            print("gotten To 20 seconds")
-//        }
-        
+
         if enemy.count == 3 {
             score += 100
         }

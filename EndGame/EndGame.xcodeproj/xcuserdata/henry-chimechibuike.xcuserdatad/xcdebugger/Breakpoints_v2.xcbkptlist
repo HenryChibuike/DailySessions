@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "createEnemy()"
+            landmarkName = "update(_:)"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
@@ -33,7 +33,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2D6709D5-ABAE-4247-AA5A-A95CF84769DA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "EndGame/GameScene.swift"
@@ -41,7 +41,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
             endingLineNumber = "143"
-            landmarkName = "touchesMoved(_:with:)"
+            landmarkName = "didBegin(_:)"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
@@ -83,7 +83,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6639B73C-4A53-4B24-BCDF-749BB9A336EB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "EndGame/GameScene.swift"
@@ -133,7 +133,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F27B5530-DDBC-4DE2-BEB0-3B181AE2A301"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "EndGame/GameScene.swift"
