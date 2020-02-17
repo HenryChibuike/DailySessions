@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
         askQuestions()
+        AuthorizationForNotification()
+         scheduleNotification()
     }
     
     func askQuestions(action: UIAlertAction! = nil){
@@ -91,4 +93,43 @@ class ViewController: UIViewController {
         
     }
 
+    
+    func AuthorizationForNotification(){
+        // authorization
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Yay!")
+            } else {
+                print("D'oh")
+            }
+        }
+        
+       
+    }
+    
+    func scheduleNotification(){
+        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Lets Get This Flag Guessing Going 😁"
+        content.body = "Uk or Nigeria"
+        content.categoryIdentifier = "alarm"
+        content.sound = UNNotificationSound.default
+        
+        var dateComponent = DateComponents()
+        dateComponent.hour = 10
+        dateComponent.minute = 10
+        
+//          let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        center.add(request)
+        
+    }
+    
 }
